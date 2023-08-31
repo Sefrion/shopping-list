@@ -141,8 +141,10 @@ function removeItemFromStorage(item) {
 }
 
 function clearItems() {
-  while (itemList.firstChild) {
-    itemList.removeChild(itemList.firstChild);
+  if (confirm('Are you sure?')) {
+    while (itemList.firstChild) {
+      itemList.removeChild(itemList.firstChild);
+    }
   }
 
   //   Clear from local storage
